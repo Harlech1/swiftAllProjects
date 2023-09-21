@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MachineLearningImageRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Reh-9k-8jy">
+                                <rect key="frame" x="46" y="86" width="301" height="428"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="428" id="Qvj-7E-hOt"/>
+                                    <constraint firstAttribute="width" constant="301" id="dpB-al-yDF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvl-oy-4Lp">
+                                <rect key="frame" x="58" y="571" width="277" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="WIC-dq-jGK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87W-fu-h2j">
+                                <rect key="frame" x="155" y="722" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change"/>
+                                <connections>
+                                    <action selector="changeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMX-B7-6Pk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Reh-9k-8jy" firstAttribute="centerX" secondItem="jvl-oy-4Lp" secondAttribute="centerX" id="2Vj-au-GEf"/>
+                            <constraint firstItem="jvl-oy-4Lp" firstAttribute="centerX" secondItem="87W-fu-h2j" secondAttribute="centerX" id="Er2-hD-Ees"/>
+                            <constraint firstItem="87W-fu-h2j" firstAttribute="top" secondItem="jvl-oy-4Lp" secondAttribute="bottom" constant="77" id="KKF-Y4-BE0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="87W-fu-h2j" secondAttribute="bottom" constant="88" id="fMJ-0J-vwr"/>
+                            <constraint firstItem="jvl-oy-4Lp" firstAttribute="top" secondItem="Reh-9k-8jy" secondAttribute="bottom" constant="30" id="hMx-hp-gg2"/>
+                            <constraint firstItem="Reh-9k-8jy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="iof-1H-AXu"/>
+                            <constraint firstItem="jvl-oy-4Lp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jzC-9t-Woa"/>
+                            <constraint firstItem="Reh-9k-8jy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="l4A-Cn-fNq"/>
+                            <constraint firstItem="jvl-oy-4Lp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="vhc-HF-dg6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Reh-9k-8jy" id="vEB-Kf-TAa"/>
+                        <outlet property="resultLabel" destination="jvl-oy-4Lp" id="5Zh-ZQ-eB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14.503816793893129" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
